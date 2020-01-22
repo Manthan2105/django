@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block body_block %}
+{% load static%}
+<head>
+  <!-- Start WOWSlider.com HEAD section -->
+	{% if user.is_authenticated %}
+        <h2>Hello {{ user.username }}</h2>
+    {% else %}
+        <h2>Register or Login if you'd like to</h2>
+    {% endif %}
+<link rel="stylesheet" type="text/css" href="{% static 'engine1/style.css' %}" />
+<script type="text/javascript" src="{% static 'engine1/jquery.js' %}"></script>
+<!-- End WOWSlider.com HEAD section -->
+</head>
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="{% static 'data1/images/medkart.png' %}" alt="" title="" id="wows1_0"/></li>
+		<li><img src="{% static 'data1/images/medkart3.jpg' %}" alt="" title="" id="wows1_1"/></li>
+		<li><a href="http://wowslider.net"><img src="{% static 'data1/images/Med-kart5.jpg' %}" alt="javascript slideshow" title="" id="wows1_2"/></a></li>
+		<li><img src="{% static 'data1/images/medkart6.jpg' %}" alt="" title="" id="wows1_3"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title=""><span><img src="{% static 'data1/tooltips/medkart.png' %}" alt=""/>1</span></a>
+		<a href="#" title=""><span><img src="{% static 'data1/tooltips/medkart3.jpg' %}" alt=""/>2</span></a>
+		<a href="#" title=""><span><img src="{% static 'data1/tooltips/Med-kart5.jpg' %}" alt=""/>3</span></a>
+		<a href="#" title=""><span><img src="{% static 'data1/tooltips/medkart6.jpg' %}" alt=""/>4</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">css image gallery</a> by WOWSlider.com v9.0</div>
+<div class="ws_shadow"></div>
+</div>
+<script type="text/javascript" src="{% static 'engine1/wowslider.js' %}"></script>
+<script type="text/javascript" src="{% static 'engine1/script.js' %}"></script>
+<!-- End WOWSlider.com BODY section -->
+
+
+{% endblock %}
